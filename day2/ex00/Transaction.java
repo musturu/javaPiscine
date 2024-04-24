@@ -3,8 +3,8 @@ import java.util.UUID;
 public class Transaction {
 
 	public enum Category {
-		DEBIT,
-		CREDIT
+		INCOME,
+		OUTCOME
 	}
 
 	private UUID	uuid;
@@ -19,7 +19,7 @@ public class Transaction {
 		this.sender = sender;
 		this.category = category;
 		this.transferAmount = transferAmount;
-		if (category == Category.DEBIT && transferAmount < 0 || category == Category.CREDIT && transferAmount > 0) {
+		if (category == Category.OUTCOME && transferAmount < 0 || category == Category.INCOME && transferAmount > 0) {
 			System.err.println("Invalid transaction type");
 			System.exit(-1);
 		}
