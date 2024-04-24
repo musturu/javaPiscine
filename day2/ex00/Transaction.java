@@ -7,11 +7,11 @@ public class Transaction {
 		CREDIT
 	}
 
-	UUID	uuid;
-	User	recipient;
-	User	sender;
-	Category category;
-	float	transferAmount;
+	private UUID	uuid;
+	private User	recipient;
+	private User	sender;
+	private Category category;
+	private float	transferAmount;
 
 	public Transaction(UUID uuid, User recipient, User sender, Category category, float transferAmount) {
 		this.uuid = uuid;
