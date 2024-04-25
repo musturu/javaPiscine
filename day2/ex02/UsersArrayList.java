@@ -12,7 +12,7 @@ public class UsersArrayList  implements UsersList {
         if (users[users.length - 1] != null) {
             newArr = new User[users.length + (users.length / 2)];
             for (int i = 0; i < users.length; i++) {
-                newArr[i] = user[i];
+                newArr[i] = users[i];
             }
             users = newArr;
         }
@@ -33,13 +33,13 @@ public class UsersArrayList  implements UsersList {
             if (users[i].identifier == id)
                 return (users[i]);
         }
-        return (null);
+        throw new UsersList.UserNotFoundException("User not Found");
     }
 
     public User getUserbyIndex(int index) {
        if (users.length > index)
            return (users[index]);
-       return (null);
+        throw new UsersList.UserNotFoundException("User not Found");
     }
 
     public int  getUserCount() {

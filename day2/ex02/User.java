@@ -13,4 +13,10 @@ public class User {
 		this.name = name;
 		this.balance = balance;
 	}
+
+	@Override
+	public String toString() {
+		return ("Account ID: " + identifier + " - " + "Account Name: " + name + " - " +
+				"Balance: " + balance);
+	}
 }
