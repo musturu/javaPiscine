@@ -1,4 +1,4 @@
-public class UsersArrayList  implements UsersList {
+public class UsersArrayList implements UsersList {
 
     public User[] users;
 
