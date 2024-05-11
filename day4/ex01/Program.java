@@ -7,8 +7,12 @@ public class Program {
 		Boolman boolman;
 		int	count;
 
+		try {
+			count = Integer.parseInt(args[0]);
+		} catch (Exception e) {
+			return ;
+		}
 		boolman = new Boolman(true);
-		count = Integer.parseInt(args[0]);
 		one = new Printer("Egg", count, boolman, true);
 		two = new Printer("Hen", count, boolman, false);
 		two.start();
